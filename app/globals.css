@@ -4,7 +4,7 @@
   --background: #f1f2f6;
   --foreground: #222f3e;
   --card-bg: #f1f2f6;
-  --navbar-bg: #f1f2f6;
+  --navbar-bg: #e8e9ec;
   --text-dark: #222f3e;
   --text-light: #222f3e;
 }
@@ -21,7 +21,7 @@
     --background: rgb(25, 34, 43);
     --foreground: #f1f2f6;
     --card-bg: #222f3e;
-    --navbar-bg: #222f3e;
+    --navbar-bg: #1c2630;
     --text-dark: #f1f2f6;
     --text-light: #222f3e;
   }

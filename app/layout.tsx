@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
@@ -29,17 +30,19 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen transition-colors`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen transition-colors overflow-x-hidden`}
         style={{
           backgroundColor: "var(--background)",
           color: "var(--foreground)",
         }}
       >
         <ThemeProvider>
-          <Navbar />
-          <main className="container mx-auto px-4 flex-grow">{children}</main>
-          <Footer />
-          <Analytics />
+          <LanguageProvider>
+            <Navbar />
+            <main className="container mx-auto px-4 flex-grow">{children}</main>
+            <Footer />
+            <Analytics />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
