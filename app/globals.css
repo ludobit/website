@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f2f6;
+  --foreground: #222f3e;
+  --card-bg: #f1f2f6;
+  --navbar-bg: #f1f2f6;
+  --text-dark: #222f3e;
+  --text-light: #222f3e;
 }
 
 @theme inline {
@@ -13,9 +17,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root.dark {
+    --background: rgb(25, 34, 43);
+    --foreground: #f1f2f6;
+    --card-bg: #222f3e;
+    --navbar-bg: #222f3e;
+    --text-dark: #f1f2f6;
+    --text-light: #222f3e;
   }
 }
 

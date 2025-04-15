@@ -1,103 +1,129 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="py-8">
+      <section className="mb-12 flex flex-col md:flex-row items-center gap-8">
+        <div className="md:w-1/3 flex justify-center">
+          <div className="relative w-64 h-64 rounded-full overflow-hidden">
+            {/* Placeholder per la tua immagine - sostituisci con una foto reale */}
+            <div
+              className="absolute inset-0 flex items-center justify-center text-2xl font-bold"
+              style={{
+                backgroundColor: "var(--card-bg)",
+                backgroundImage:
+                  "url('https://ludovicodellavecchia.info/me.12c10fac.gif')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                color: "var(--text-dark)",
+              }}
+            ></div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="md:w-2/3">
+          <h1
+            className="text-4xl font-bold mb-4"
+            style={{ color: "var(--text-dark)" }}
+          >
+            Ludovico Dellavecchia
+          </h1>
+          <p className="text-xl mb-6" style={{ color: "var(--text-dark)" }}>
+            Professional Software Developer con esperienza in soluzioni
+            innovative.
+          </p>
+          <div className="flex space-x-4">
+            <Link
+              href="/contatti"
+              className="text-white px-6 py-2 rounded-md transition-colors"
+            >
+              Contattami
+            </Link>
+            <Link
+              href="/esperienza"
+              className="px-6 py-2 rounded-md transition-colors"
+            >
+              Scopri di più
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <h2
+          className="text-2xl font-bold mb-6 pb-2 border-b"
+          style={{ color: "var(--text-dark)", borderColor: "var(--text-dark)" }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Chi sono
+        </h2>
+        <p className="text-lg mb-4" style={{ color: "var(--text-dark)" }}>
+          Ciao! Sono Ludovico Dellavecchia, un appassionato sviluppatore
+          software con esperienza in diverse tecnologie e settori. Mi piace
+          affrontare sfide complesse e creare soluzioni software innovative ed
+          efficienti.
+        </p>
+        <p className="text-lg" style={{ color: "var(--text-dark)" }}>
+          Questo sito raccoglie la mia esperienza professionale, le mie
+          competenze tecniche e i miei contributi. Sentiti libero di esplorare e
+          contattarmi per collaborazioni o discussioni tecniche.
+        </p>
+      </section>
+
+      <section>
+        <h2
+          className="text-2xl font-bold mb-6 pb-2 border-b"
+          style={{ color: "var(--text-dark)", borderColor: "var(--text-dark)" }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          Competenze principali
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            className="p-6 rounded-lg shadow-md"
+            style={{ backgroundColor: "var(--card-bg)" }}
+          >
+            <h3
+              className="text-xl font-semibold mb-3"
+              style={{ color: "var(--text-dark)" }}
+            >
+              Sviluppo Software
+            </h3>
+            <p style={{ color: "var(--text-dark)" }}>
+              Esperienza nello sviluppo di applicazioni utilizzando tecnologie
+              moderne e approcci metodologici avanzati.
+            </p>
+          </div>
+          <div
+            className="p-6 rounded-lg shadow-md"
+            style={{ backgroundColor: "var(--card-bg)" }}
+          >
+            <h3
+              className="text-xl font-semibold mb-3"
+              style={{ color: "var(--text-dark)" }}
+            >
+              Architetture Cloud
+            </h3>
+            <p style={{ color: "var(--text-dark)" }}>
+              Competenze nella progettazione e implementazione di soluzioni
+              cloud scalabili e resilienti.
+            </p>
+          </div>
+          <div
+            className="p-6 rounded-lg shadow-md"
+            style={{ backgroundColor: "var(--card-bg)" }}
+          >
+            <h3
+              className="text-xl font-semibold mb-3"
+              style={{ color: "var(--text-dark)" }}
+            >
+              DevOps
+            </h3>
+            <p style={{ color: "var(--text-dark)" }}>
+              Conoscenza delle pratiche DevOps per l'automazione e
+              l'ottimizzazione dei processi di sviluppo e deployment.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
