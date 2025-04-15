@@ -136,7 +136,7 @@ export default function PostList() {
                   />
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 relative">
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex flex-wrap gap-2">
                     {Array.isArray(post.categoria) ? (

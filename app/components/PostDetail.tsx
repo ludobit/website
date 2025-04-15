@@ -100,12 +100,7 @@ export default function PostDetail({
       )}
 
       <div className="prose max-w-none dark:prose-invert">
-        {/* Verifica se il contenuto è HTML e lo renderizza appropriatamente */}
-        {contenuto.startsWith("<") ? (
-          <div dangerouslySetInnerHTML={{ __html: contenuto }} />
-        ) : (
-          <p style={{ color: "var(--text-dark)" }}>{contenuto}</p>
-        )}
+        <div dangerouslySetInnerHTML={{ __html: contenuto }} />
       </div>
     </div>
   );
