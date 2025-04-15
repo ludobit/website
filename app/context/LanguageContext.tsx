@@ -28,7 +28,7 @@ const translations = {
     // Navbar
     home: "Home",
     experience: "Esperienza",
-    posts: "Post",
+    posts: "Articoli",
     contacts: "Contatti",
 
     // Home page
@@ -65,7 +65,7 @@ const translations = {
     // Navbar
     home: "Home",
     experience: "Experience",
-    posts: "Posts",
+    posts: "Articles",
     contacts: "Contact",
 
     // Home page

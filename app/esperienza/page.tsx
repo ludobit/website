@@ -36,7 +36,6 @@ export default function EsperienzaPage() {
         "Express",
         "React",
         "Angular",
-        "VueJS",
         "PostgreSQL",
         "Docker",
         "Kubernetes",
@@ -140,11 +139,11 @@ export default function EsperienzaPage() {
     {
       id: 1,
       istituto:
-        language === "it" ? "Università di Torino" : "University of Turin",
+        language === "it" ? "ITS per l'ICT Piemonte" : "ITS per l'ICT Piemonte",
       titolo:
         language === "it"
-          ? "Laurea in Informatica"
-          : "Degree in Computer Science",
+          ? "Diploma di Specializzazione in Mobile App Design"
+          : "Specialization Degree in Mobile App Design",
       anno: "2015",
       descrizione:
         language === "it"
@@ -173,11 +172,8 @@ export default function EsperienzaPage() {
       skills: [
         "React",
         "Angular",
-        "Vue.js",
         "JavaScript",
         "TypeScript",
-        "HTML5",
-        "CSS3",
         "SASS/SCSS",
         "Responsive Design",
         "Microfrontend Architecture",
@@ -192,55 +188,30 @@ export default function EsperienzaPage() {
         "Express",
         "REST API",
         "GraphQL",
-        "Microservices",
         "Java",
-        "PHP",
+        "Microservices",
       ],
     },
     {
       categoria: language === "it" ? "Database" : "Database",
-      skills: [
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Redis",
-        "Database Design",
-        "SQL",
-        "NoSQL",
-      ],
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Database Design"],
     },
     {
       categoria: language === "it" ? "DevOps & Tools" : "DevOps & Tools",
-      skills: [
-        "Docker",
-        "Kubernetes",
-        "CI/CD",
-        "Git",
-        "GitHub",
-        "GitLab",
-        "Jira",
-        "Agile Methodologies",
-        "Scrum",
-      ],
+      skills: ["CI/CD", "Git", "Agile Methodologies", "Scrum"],
     },
     {
       categoria:
         language === "it" ? "Mobile Development" : "Mobile Development",
-      skills: [
-        "Ionic",
-        "Cordova",
-        "Capacitor",
-        "React Native",
-        "Progressive Web Apps",
-      ],
+      skills: ["Ionic", "Capacitor", "React Native", "Progressive Web Apps"],
     },
     {
       categoria:
         language === "it" ? "Cloud & Infrastructure" : "Cloud & Infrastructure",
       skills: [
-        "AWS",
+        "Kubernetes",
+        "Containerization",
         "Azure",
-        "Google Cloud",
         "Serverless Architecture",
         "Infrastructure as Code",
       ],
@@ -310,7 +281,7 @@ export default function EsperienzaPage() {
                     {esp.tecnologie.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 text-sm rounded-full"
+                        className="px-4 py-1 text-sm rounded-full"
                         style={{
                           backgroundColor: "var(--navbar-bg)",
                           color: "var(--text-dark)",

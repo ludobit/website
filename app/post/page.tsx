@@ -7,7 +7,7 @@ export default function PostPage() {
         className="text-3xl font-bold mb-8"
         style={{ color: "var(--text-dark)" }}
       >
-        Blog e Articoli
+        Articoli
       </h1>
       <PostList />
     </div>

@@ -38,7 +38,7 @@ export default function Home() {
           <div className="flex space-x-4">
             <Link
               href="/contatti"
-              className="border text-white px-6 py-2 rounded-md transition-colors"
+              className="border px-6 py-2 rounded-md transition-colors"
             >
               {t("contact_me")}
             </Link>
