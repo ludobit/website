@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       className="py-8 mt-auto transition-colors"
-      style={{ backgroundColor: "var(--navbar-bg)" }}
+      style={{ backgroundColor: "transparent" }}
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">

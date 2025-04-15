@@ -101,7 +101,7 @@ export default function ContattiPage() {
       </div>
 
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none"
+        className="fixed inset-0 bg-cover bg-center opacity-20 pointer-events-none"
         style={{
           backgroundImage: `url('/turin.svg')`,
           zIndex: -1,
