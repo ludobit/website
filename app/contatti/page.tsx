@@ -28,9 +28,9 @@ export default function ContattiPage() {
   ];
 
   return (
-    <div className="py-8 relative">
+    <div className="py-4 sm:py-8 px-4 sm:px-0 min-h-[70vh]">
       <h1
-        className="text-3xl font-bold mb-8 max-w-2xl mx-auto"
+        className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8 max-w-2xl mx-auto"
         style={{ color: "var(--text-dark)" }}
       >
         {language === "it" ? "Contatti" : "Contact"}
@@ -38,36 +38,39 @@ export default function ContattiPage() {
 
       <div className="max-w-2xl mx-auto">
         <div
-          className="p-8 rounded-lg shadow-md mb-8"
+          className="p-4 sm:p-8 rounded-lg shadow-md mb-4 sm:mb-8"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           <h2
-            className="text-2xl font-bold mb-6"
+            className="text-xl sm:text-2xl font-bold mb-3 sm:mb-6"
             style={{ color: "var(--text-dark)" }}
           >
             {language === "it" ? "Restiamo in contatto" : "Let's Stay in Touch"}
           </h2>
-          <p className="mb-6 text-lg" style={{ color: "var(--text-dark)" }}>
+          <p
+            className="mb-4 sm:mb-6 text-base sm:text-lg"
+            style={{ color: "var(--text-dark)" }}
+          >
             {language === "it"
               ? "Sei interessato a collaborare? Non esitare a contattarmi attraverso i canali qui sotto."
               : "Are you interested in collaborating? Don't hesitate to contact me through the channels below."}
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-center">
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
                   style={{
                     backgroundColor: "var(--navbar-bg)",
                     color: "var(--text-dark)",
                   }}
                 >
-                  <span className="text-xl">{info.icon}</span>
+                  <span className="text-lg sm:text-xl">{info.icon}</span>
                 </div>
-                <div>
+                <div className="overflow-hidden">
                   <h3
-                    className="font-semibold"
+                    className="font-semibold text-sm sm:text-base"
                     style={{ color: "var(--text-dark)" }}
                   >
                     {info.title}
@@ -75,7 +78,7 @@ export default function ContattiPage() {
                   {info.link ? (
                     <a
                       href={info.link}
-                      className="hover:underline"
+                      className="hover:underline text-sm sm:text-base break-words"
                       style={{ color: "var(--text-dark)" }}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -83,7 +86,12 @@ export default function ContattiPage() {
                       {info.content}
                     </a>
                   ) : (
-                    <p style={{ color: "var(--text-dark)" }}>{info.content}</p>
+                    <p
+                      style={{ color: "var(--text-dark)" }}
+                      className="text-sm sm:text-base"
+                    >
+                      {info.content}
+                    </p>
                   )}
                 </div>
               </div>
@@ -93,7 +101,7 @@ export default function ContattiPage() {
       </div>
 
       <div
-        className="absolute bottom-0 left-[-9rem] right-[-9rem] h-80 bg-cover bg-bottom opacity-20 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none"
         style={{
           backgroundImage: `url('/turin.svg')`,
           zIndex: -1,
