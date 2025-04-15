@@ -93,7 +93,7 @@ export default function ContattiPage() {
       </div>
 
       <div
-        className="absolute bottom-0 left-[-9rem] right-[-9rem] h-40 bg-cover bg-bottom opacity-20 pointer-events-none"
+        className="absolute bottom-0 left-[-9rem] right-[-9rem] h-80 bg-cover bg-bottom opacity-20 pointer-events-none"
         style={{
           backgroundImage: `url('/turin.svg')`,
           zIndex: -1,
