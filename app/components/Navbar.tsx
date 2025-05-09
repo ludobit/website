@@ -13,9 +13,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path: string) => {
-    return pathname === path
-      ? "text-blue-600 dark:text-blue-400 font-bold"
-      : "hover:text-blue-500 dark:hover:text-blue-300";
+    return pathname === path ? "font-bold" : "";
   };
 
   const toggleMenu = () => {
@@ -25,45 +23,65 @@ export default function Navbar() {
   return (
     <nav
       className="shadow-md py-4 mb-8 transition-colors"
-      style={{ backgroundColor: "var(--navbar-bg)" }}
+      style={{
+        backgroundColor: "var(--navbar-bg)",
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link
-            href="/"
-            className="text-xl font-bold"
-            style={{ color: "var(--text-dark)" }}
-          >
-            LDV
-          </Link>
+          <Link href="/" className="text-xl font-bold" data-text="LDV"></Link>
 
           {/* Menu per desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/"
               className={`${isActive("/")} transition-colors`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/" ? "var(--neon-green)" : "var(--text-dark)",
+                textShadow: pathname === "/" ? "var(--neon-glow)" : "none",
+              }}
             >
               {t("home")}
             </Link>
             <Link
               href="/esperienza"
               className={`${isActive("/esperienza")} transition-colors`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/esperienza"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow:
+                  pathname === "/esperienza" ? "var(--neon-glow)" : "none",
+              }}
             >
               {t("experience")}
             </Link>
             <Link
               href="/post"
               className={`${isActive("/post")} transition-colors`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/post"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow: pathname === "/post" ? "var(--neon-glow)" : "none",
+              }}
             >
               {t("posts")}
             </Link>
             <Link
               href="/contatti"
               className={`${isActive("/contatti")} transition-colors`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/contatti"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow:
+                  pathname === "/contatti" ? "var(--neon-glow)" : "none",
+              }}
             >
               {t("contacts")}
             </Link>
@@ -77,6 +95,7 @@ export default function Navbar() {
               onClick={toggleMenu}
               className="p-2"
               aria-label="Toggle menu"
+              style={{ color: "var(--neon-green)" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +107,7 @@ export default function Navbar() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ color: "var(--text-dark)" }}
+                style={{ filter: "drop-shadow(0 0 2px var(--neon-green))" }}
               >
                 {isMenuOpen ? (
                   <path d="M18 6L6 18M6 6l12 12" />
@@ -104,12 +123,16 @@ export default function Navbar() {
         {isMenuOpen && (
           <div
             className="md:hidden mt-4 flex flex-col space-y-4 py-2 border-t"
-            style={{ borderColor: "var(--text-light)" }}
+            style={{ borderColor: "var(--neon-green)" }}
           >
             <Link
               href="/"
               className={`${isActive("/")} transition-colors block py-2`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/" ? "var(--neon-green)" : "var(--text-dark)",
+                textShadow: pathname === "/" ? "var(--neon-glow)" : "none",
+              }}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("home")}
@@ -119,7 +142,14 @@ export default function Navbar() {
               className={`${isActive(
                 "/esperienza"
               )} transition-colors block py-2`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/esperienza"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow:
+                  pathname === "/esperienza" ? "var(--neon-glow)" : "none",
+              }}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("experience")}
@@ -127,7 +157,13 @@ export default function Navbar() {
             <Link
               href="/post"
               className={`${isActive("/post")} transition-colors block py-2`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/post"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow: pathname === "/post" ? "var(--neon-glow)" : "none",
+              }}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("posts")}
@@ -137,7 +173,14 @@ export default function Navbar() {
               className={`${isActive(
                 "/contatti"
               )} transition-colors block py-2`}
-              style={{ color: "var(--text-dark)" }}
+              style={{
+                color:
+                  pathname === "/contatti"
+                    ? "var(--neon-green)"
+                    : "var(--text-dark)",
+                textShadow:
+                  pathname === "/contatti" ? "var(--neon-glow)" : "none",
+              }}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("contacts")}

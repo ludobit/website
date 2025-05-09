@@ -21,6 +21,7 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 color: "var(--text-dark)",
+                boxShadow: "0 0 15px var(--neon-green)",
               }}
             ></div>
           </div>
@@ -28,25 +29,24 @@ export default function Home() {
         <div className="w-full md:w-2/3 text-center md:text-left mt-4 md:mt-0">
           <h1
             className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4"
-            style={{ color: "var(--text-dark)" }}
+            data-text="Ludovico Dellavecchia"
           >
             Ludovico Dellavecchia
           </h1>
-          <p
-            className="text-lg sm:text-xl mb-4 sm:mb-6"
-            style={{ color: "var(--text-dark)" }}
-          >
+          <p className="text-lg sm:text-xl mb-4 sm:mb-6">
             Business Analyst - Senior Software Developer at Orbyta Tech
           </p>
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 items-center justify-center md:justify-start">
             <Link
               href="/contatti"
+              style={{ color: "var(--neon-green)" }}
               className="w-full sm:w-auto border px-6 py-2 rounded-md transition-colors text-center"
             >
               {t("contact_me")}
             </Link>
             <Link
               href="/esperienza"
+              style={{ color: "var(--neon-purple)" }}
               className="w-full sm:w-auto border px-6 py-2 rounded-md transition-colors text-center"
             >
               {t("discover_more")}
@@ -56,10 +56,7 @@ export default function Home() {
       </section>
 
       <section className="mb-8 sm:mb-12">
-        <h2
-          className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 pb-2 border-b"
-          style={{ color: "var(--text-dark)", borderColor: "var(--text-dark)" }}
-        >
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 pb-2 border-b">
           {t("about_me")}
         </h2>
         <p
@@ -77,10 +74,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2
-          className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 pb-2 border-b"
-          style={{ color: "var(--text-dark)", borderColor: "var(--text-dark)" }}
-        >
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 pb-2 border-b">
           {t("main_skills")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

@@ -64,14 +64,48 @@ export default function RootLayout({
         style={{
           backgroundColor: "var(--background)",
           color: "var(--foreground)",
+          position: "relative",
         }}
       >
+        {/* Effetto neon background */}
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(45deg, rgba(126, 15, 255, 0.03) 0%, rgba(15, 255, 193, 0.03) 100%)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+        <div
+          style={{
+            position: "fixed",
+            top: "10%",
+            left: "15%",
+            width: "70%",
+            height: "80%",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle, rgba(15, 255, 193, 0.05) 0%, rgba(126, 15, 255, 0.02) 70%, transparent 100%)",
+            filter: "blur(50px)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
         <ThemeProvider>
           <LanguageProvider>
-            <Navbar />
-            <main className="container mx-auto px-4 flex-grow">{children}</main>
-            <Footer />
-            <Analytics />
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <Navbar />
+              <main className="container mx-auto px-4 flex-grow">
+                {children}
+              </main>
+              <Footer />
+              <Analytics />
+            </div>
           </LanguageProvider>
         </ThemeProvider>
       </body>

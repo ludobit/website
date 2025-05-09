@@ -9,19 +9,65 @@ export default function ContattiPage() {
 
   const contactInfo = [
     {
-      icon: "✉️",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--neon-green)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      ),
       title: language === "it" ? "Email" : "Email",
       content: "ludovico.dellavecchia@gmail.com",
       link: "mailto:ludovico.dellavecchia@gmail.com",
     },
     {
-      icon: "💼",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--neon-green)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      ),
       title: language === "it" ? "LinkedIn" : "LinkedIn",
       content: "linkedin.com/in/ludovicodellavecchia",
       link: "https://www.linkedin.com/in/ludovicodellavecchia/",
     },
     {
-      icon: "📍",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--neon-green)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+      ),
       title: language === "it" ? "Località" : "Location",
       content: language === "it" ? "Italia, Torino" : "Italy, Turin",
     },
@@ -60,10 +106,11 @@ export default function ContattiPage() {
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-center">
                 <div
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
+                  className="w-10 h-10 sm:w-12 sm:h-12 border rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
                   style={{
                     backgroundColor: "var(--navbar-bg)",
                     color: "var(--text-dark)",
+                    borderColor: "var(--neon-green)",
                   }}
                 >
                   <span className="text-lg sm:text-xl">{info.icon}</span>
@@ -78,7 +125,7 @@ export default function ContattiPage() {
                   {info.link ? (
                     <a
                       href={info.link}
-                      className="hover:underline text-sm sm:text-base break-words"
+                      className="hover:underline text-sm sm:text-base break-words transition-all hover:text-[var(--neon-green)]"
                       style={{ color: "var(--text-dark)" }}
                       target="_blank"
                       rel="noopener noreferrer"

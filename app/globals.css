@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f6f2;
-  --foreground: #2d3436;
-  --card-bg: #ffffff;
-  --navbar-bg: #f0ece3;
-  --text-dark: #121212;
-  --text-light: #4a4a4a;
+  /* Tema scuro (default) */
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+  --card-bg: #151515;
+  --navbar-bg: #101010;
+  --text-dark: #f5f5f5;
+  --text-light: #a0a0a0;
+  --neon-green: #0fffc1;
+  --neon-purple: #7e0fff;
+  --neon-glow: 0 0 5px rgba(15, 255, 193, 0.7), 0 0 10px rgba(15, 255, 193, 0.5);
 }
 
 @theme inline {
@@ -16,15 +20,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root.dark {
-    --background: #1a1a1a;
-    --foreground: #e0e0e0;
-    --card-bg: #252525;
-    --navbar-bg: #202020;
-    --text-dark: #f5f5f5;
-    --text-light: #a0a0a0;
-  }
+/* Tema chiaro */
+:root:not(.dark) {
+  --background: #f0f0f0;
+  --foreground: #121212;
+  --card-bg: #ffffff;
+  --navbar-bg: #e6e6e6;
+  --text-dark: #121212;
+  --text-light: #4a4a4a;
+  /* Mantenendo gli stessi colori neon ma con luminosità ridotta per il tema chiaro */
+  --neon-green: #5e57ff;
+  --neon-purple: #f23ca6;
+  --neon-glow: 0 0 5px rgba(94, 87, 255, 0.5),
+    0 0 10px rgba(94, 87, 255, 0.5) rgba(94, 87, 255, 0.3);
 }
 
 body {
@@ -52,11 +60,16 @@ video {
   height: auto;
 }
 
-/* Miglioramenti per l'accessibilità */
-a:focus,
-button:focus {
-  outline: 2px solid #007aff;
-  outline-offset: 2px;
+/* Effetto neon per i link e bottoni */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+a:hover,
+button:hover {
+  color: var(--neon-green);
+  text-shadow: var(--neon-glow);
 }
 
 .container {

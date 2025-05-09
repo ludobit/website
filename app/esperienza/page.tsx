@@ -220,18 +220,8 @@ export default function EsperienzaPage() {
 
   return (
     <div className="py-8">
-      <h1
-        className="text-3xl font-bold mb-8"
-        style={{ color: "var(--text-dark)" }}
-      >
-        {t("professional_experience")}
-      </h1>
-
       <section className="mb-12">
-        <h2
-          className="text-2xl font-bold mb-6 pb-2 border-b"
-          style={{ color: "var(--text-dark)", borderColor: "var(--text-dark)" }}
-        >
+        <h2 className="text-2xl font-bold mb-6 pb-2 border-b">
           {t("work_experience")}
         </h2>
         <div className="space-y-8">
@@ -243,12 +233,7 @@ export default function EsperienzaPage() {
             >
               <div className="flex flex-col md:flex-row md:justify-between mb-4">
                 <div>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ color: "var(--text-dark)" }}
-                  >
-                    {esp.ruolo}
-                  </h3>
+                  <h3 className="text-xl font-bold">{esp.ruolo}</h3>
                   <p
                     className="font-medium"
                     style={{ color: "var(--text-dark)" }}
@@ -281,10 +266,25 @@ export default function EsperienzaPage() {
                     {esp.tecnologie.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-4 py-1 text-sm rounded-full"
+                        className="px-4 py-1 text-sm rounded-full transition-all hover:scale-105"
                         style={{
-                          backgroundColor: "var(--navbar-bg)",
-                          color: "var(--text-dark)",
+                          backgroundColor: "var(--card-bg)",
+                          color:
+                            i % 2 === 0
+                              ? "var(--neon-green)"
+                              : "var(--neon-purple)",
+                          boxShadow:
+                            i % 2 === 0
+                              ? "0 0 5px var(--neon-green)"
+                              : "0 0 5px var(--neon-purple)",
+                          border:
+                            i % 2 === 0
+                              ? "1px solid var(--neon-green)"
+                              : "1px solid var(--neon-purple)",
+                          textShadow:
+                            i % 2 === 0
+                              ? "0 0 2px rgba(15, 255, 193, 0.5)"
+                              : "0 0 2px rgba(126, 15, 255, 0.5)",
                         }}
                       >
                         {tech}
@@ -354,10 +354,25 @@ export default function EsperienzaPage() {
                 {competenza.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 rounded-full text-sm"
+                    className="px-3 py-1 rounded-full text-sm transition-all hover:scale-105"
                     style={{
-                      backgroundColor: "var(--navbar-bg)",
-                      color: "var(--text-dark)",
+                      backgroundColor: "var(--card-bg)",
+                      color:
+                        i % 2 === 0
+                          ? "var(--neon-green)"
+                          : "var(--neon-purple)",
+                      boxShadow:
+                        i % 2 === 0
+                          ? "0 0 5px var(--neon-green)"
+                          : "0 0 5px var(--neon-purple)",
+                      border:
+                        i % 2 === 0
+                          ? "1px solid var(--neon-green)"
+                          : "1px solid var(--neon-purple)",
+                      textShadow:
+                        i % 2 === 0
+                          ? "0 0 2px rgba(15, 255, 193, 0.5)"
+                          : "0 0 2px rgba(126, 15, 255, 0.5)",
                     }}
                   >
                     {skill}

@@ -140,13 +140,28 @@ export default function PostList() {
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex flex-wrap gap-2">
                     {Array.isArray(post.categoria) ? (
-                      post.categoria.map((cat, index) => (
+                      post.categoria.map((cat, i) => (
                         <span
-                          key={`tag-${post.id}-${index}`}
+                          key={`tag-${post.id}-${i}`}
                           className="text-xs font-semibold px-2.5 py-0.5 rounded"
                           style={{
-                            backgroundColor: "var(--navbar-bg)",
-                            color: "var(--text-dark)",
+                            backgroundColor: "var(--card-bg)",
+                            color:
+                              i % 2 === 0
+                                ? "var(--neon-green)"
+                                : "var(--neon-purple)",
+                            boxShadow:
+                              i % 2 === 0
+                                ? "0 0 5px var(--neon-green)"
+                                : "0 0 5px var(--neon-purple)",
+                            border:
+                              i % 2 === 0
+                                ? "1px solid var(--neon-green)"
+                                : "1px solid var(--neon-purple)",
+                            textShadow:
+                              i % 2 === 0
+                                ? "0 0 2px rgba(15, 255, 193, 0.5)"
+                                : "0 0 2px rgba(126, 15, 255, 0.5)",
                           }}
                         >
                           {cat}
