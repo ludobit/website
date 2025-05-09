@@ -38,7 +38,7 @@ const translations = {
     main_skills: "Competenze principali",
     software_development: "Sviluppo Software",
     software_development_desc:
-      "Esperienza nello sviluppo di applicazioni utilizzando tecnologie moderne e approcci metodologici avanzati.",
+      "Progetto e sviluppo applicazioni utilizzando tecnologie moderne e approcci metodologici avanzati.",
     cloud_architectures: "Architetture Cloud",
     cloud_architectures_desc:
       "Competenze nella progettazione e implementazione di soluzioni cloud scalabili e resilienti.",
@@ -48,7 +48,7 @@ const translations = {
 
     // Bio
     bio_p1:
-      "Mi occupo di progettare soluzioni architetturali digitali conducendo l'analisi di business per i clienti e combinandola con le opportunità tecnologiche moderne. Nel 2013 ho iniziato a studiare design e sviluppo software. Dal 2015 al 2020 ho lavorato come freelance sviluppando applicazioni native, ibride e web utilizzando lo human-centered design e la metodologia agile.",
+      "Mi occupo di progettare e realizzare soluzioni digitali conducendo analisi funzionali e di business per combinarle con le opportunità tecnologiche del mercato. Nel 2013 ho iniziato a studiare design e sviluppo software. Dal 2015 al 2020 ho lavorato come freelance sviluppando applicazioni native, ibride e web utilizzando lo human-centered design e la metodologia agile.",
     bio_p2:
       "Nel 2020 ho iniziato il mio lavoro come Senior Software Developer Consultant presso Orbyta. Nel 2025 ho assunto il ruolo di Projects Coordinator nella WEB Business Unit, supervisionando progetti complessi in settori come Mobility&Transportation, Smart Building e IoT Monitoring.",
 
