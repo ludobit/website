@@ -16,7 +16,7 @@ export default function ContattiPage() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--neon-green)"
+          stroke="var(--neon-purple)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -37,7 +37,7 @@ export default function ContattiPage() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--neon-green)"
+          stroke="var(--neon-purple)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -59,7 +59,7 @@ export default function ContattiPage() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--neon-green)"
+          stroke="var(--neon-purple)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -105,14 +105,7 @@ export default function ContattiPage() {
           <div className="space-y-4 sm:space-y-6">
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-center">
-                <div
-                  className="w-10 h-10 sm:w-12 sm:h-12 border rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0"
-                  style={{
-                    backgroundColor: "var(--navbar-bg)",
-                    color: "var(--text-dark)",
-                    borderColor: "var(--neon-green)",
-                  }}
-                >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
                   <span className="text-lg sm:text-xl">{info.icon}</span>
                 </div>
                 <div className="overflow-hidden">
@@ -126,7 +119,7 @@ export default function ContattiPage() {
                     <a
                       href={info.link}
                       className="hover:underline text-sm sm:text-base break-words transition-all hover:text-[var(--neon-green)]"
-                      style={{ color: "var(--text-dark)" }}
+                      style={{ color: "var(--neon-green)" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
