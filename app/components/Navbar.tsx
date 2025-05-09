@@ -21,12 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className="shadow-md py-4 mb-8 transition-colors"
-      style={{
-        backgroundColor: "var(--navbar-bg)",
-      }}
-    >
+    <nav className="py-4 mb-8 transition-colors">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold" data-text="LDV"></Link>
