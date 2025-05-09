@@ -10,7 +10,7 @@
   --text-light: #a0a0a0;
   --neon-green: #0fffc1;
   --neon-purple: #7e0fff;
-  --neon-glow: 0 0 5px rgba(15, 255, 193, 0.7), 0 0 10px rgba(15, 255, 193, 0.5);
+  --neon-glow: 0 0 5px rgba(15, 255, 193, 0.5), 0 0 10px rgba(15, 255, 193, 0.3);
 }
 
 @theme inline {

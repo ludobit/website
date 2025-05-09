@@ -6,6 +6,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
+import WireframeWrapper from "./components/WireframeWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -99,12 +100,14 @@ export default function RootLayout({
         <ThemeProvider>
           <LanguageProvider>
             <div style={{ position: "relative", zIndex: 1 }}>
-              <Navbar />
-              <main className="container mx-auto px-4 flex-grow">
-                {children}
-              </main>
-              <Footer />
-              <Analytics />
+              <WireframeWrapper color="var(--foreground)" duration={2000}>
+                <Navbar />
+                <main className="container mx-auto px-4 flex-grow">
+                  {children}
+                </main>
+                <Footer />
+                <Analytics />
+              </WireframeWrapper>
             </div>
           </LanguageProvider>
         </ThemeProvider>
